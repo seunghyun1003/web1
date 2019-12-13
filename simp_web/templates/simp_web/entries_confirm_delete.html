@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}delete memo{% endblock %}</title>
+</head>
+
+<body>
+  <form method="post">
+    {% csrf_token %}
+    <div class="alert alert-danger">{{object}} delete?</div>
+    <input type="submit" class="btn btn-info btn-sm" value="delete">
+  </form>
+</body>
+</html>

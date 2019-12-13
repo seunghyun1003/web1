@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "admin/css/base.css" %}" />
+    <title>{% block title %}simple web{% endblock %}</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>간단한 메모 웹사이트</h1>
+    <a class="nav-link active" href="{% url 'index' %}">조코마Home |</a>
+    <a class="nav-link active" href="{% url 'page' %}">기존의 Home</a>
+  </div>
+
+
+  <div id="content", name="content">
+    {% block content %}
+    {% endblock %}
+    <br>
+  </div>
+</body>
+</html>

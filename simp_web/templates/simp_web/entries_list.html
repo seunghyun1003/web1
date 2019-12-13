@@ -1,0 +1,29 @@
+{% extends 'simp_web/base.html' %}
+
+{% block title %}memolist{% endblock %}
+{% block content %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope = "col">#</th>
+                <th scope = "col">title</th>
+                <th scope = "col">content</th>
+                <th scope = "col">update</th>
+                <th scope = "col">delete</th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for Entries in object_list %}
+          <tr>
+            <td>{{forloop.counter}}</td>
+            <td><a href="{%  url 'detail' pk=Entries.id %}">{{Entries.title}}</a></td>
+            <td>{{Entries.content}}</td>
+            <td><a href="{% url 'update' pk=Entries.id %}" class="btn btn-success btn-sm">update</a></td>
+            <td><a href="{% url 'delete' pk=Entries.id %}" class="btn btn-danger btn-sm">delete</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+    <li><a href="{% url 'memo' %}">메모 카테고리로 이동</a></li>
+
+{% endblock %}

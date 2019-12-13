@@ -1,0 +1,27 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+
+    <section class="site-section py-lg">
+      <div class="container">
+        <h2>새 글 작성하기</h2>
+        {% load widget_tweaks %}
+        <form action="" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {% for field in form.visible_fields %} #views.py에 설정한 필드
+          <div class="form.group">
+            <label for="{{field.id_for_label}}">{{field.label}}</label>
+            {{field|add_class:'form-control'}}
+            {%  for error in field.errors %}
+            <span class="help-block">{{error}}</span>
+            {% endfor %}
+          </div>
+          {% endfor %}
+          <input type="submit" value="저장">
+        </form>
+          <!-- END sidebar -->
+
+        </div>
+      </div>
+    </section>
+
+{% endblock %}

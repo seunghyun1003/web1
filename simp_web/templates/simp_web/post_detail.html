@@ -1,0 +1,34 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+
+    <section class="site-section py-lg">
+      <div class="container">
+
+        <div class="row blog-entries">
+          <div class="col-md-12 col-lg-8 main-content">
+            <h1 class="mb-4">{{ post.title }}</h1>
+            <div class="post-meta">
+                <span class="category">
+                  {% for c in post.category.all %}
+                    {{ c }}
+                    {% if not forloop.last %}
+                      ,
+                    {% endif %}
+                  {% endfor %}
+                </span>
+                <span class="mr-2">{{ post.createDate}}</span> &bullet;
+            </div>
+              {% if post.title_image %}
+              <div class="post-full-width">
+                <img src="{{ post.title_image.url }}" alt="">
+              {% endif %}
+              </div>
+              {{ post.content }}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+{% endblock %}
