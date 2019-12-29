@@ -31,8 +31,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '13.124.243.246',
-    '.amazonaws.com',
-    'ec2-13-125-213-214.ap-northeast-2.compute.amazonaws.com',]
+    'ec2-13-124-243-246.ap-northeast-2.compute.amazonaws.com',]
 
 
 # Application definition
