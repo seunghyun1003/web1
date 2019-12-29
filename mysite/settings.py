@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'simp_web.apps.SimpWebConfig',
+    'django_extensions',
     'widget_tweaks',
 ]
 
@@ -106,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'ko-kr'
+LANGUAGE = 'ko-kr'
 
 #TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Seoul'
