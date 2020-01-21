@@ -27,7 +27,8 @@ SECRET_KEY = '3e_pw+zz)wmv=(laj==a)ce=loi77%@&ruhkn7!vad8j=hy#%^'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '192.168.56.101',
+    'jsh.pythonanywhere.com'
+    '192.168.35.29',
     'localhost',
     '127.0.0.1',
     '13.124.243.246',
@@ -37,6 +38,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
     'simp_web.apps.SimpWebConfig',
     'django_extensions',
     'widget_tweaks',
+
 ]
 
 MIDDLEWARE = [
@@ -128,6 +131,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'web_static')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
