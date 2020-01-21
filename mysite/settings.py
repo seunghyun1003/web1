@@ -27,7 +27,7 @@ SECRET_KEY = '3e_pw+zz)wmv=(laj==a)ce=loi77%@&ruhkn7!vad8j=hy#%^'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'jsh.pythonanywhere.com'
+    'jsh.pythonanywhere.com',
     '192.168.35.29',
     'localhost',
     '127.0.0.1',
