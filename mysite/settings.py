@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'jsh.pythonanywhere.com',
-    '192.168.35.29',
     'localhost',
     '127.0.0.1',
     '13.124.243.246',
